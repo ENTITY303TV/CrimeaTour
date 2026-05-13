@@ -1,0 +1,47 @@
+.conteiner {
+    background-color: var(--Royal_night);
+    border-radius: 15px;
+    text-align: left;
+    max-width: 1400px;
+    min-height: 598px;
+    margin: 0 auto;
+    padding: 0 40px;
+    color: var(--Lavender-mist);
+}
+
+.home {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.home__title {
+    padding-bottom: 24px;
+    font-size: 100px;
+}
+
+.home__title--italic {
+    font-family: var(--Georgia);
+    font-style: italic;
+    font-weight: 400;
+    background: linear-gradient(90deg, #8338ec 0%, #b923ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home__bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.home__text {
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.home__icon {
+    float: right;
+    left: 1350px;
+    bottom: 300px;
+}

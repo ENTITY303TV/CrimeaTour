@@ -1,0 +1,94 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Мягкий сброс отступов только у основных элементов */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd, pre {
+  margin: 0;
+}
+
+/* HTML5 и современные элементы */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, 
+dialog, main, summary {
+  display: block;
+}
+
+/* Главные контейнеры */
+main, #root {
+  isolation: isolate;
+}
+
+/* База документа */
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Списки */
+ul[class], ol[class] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Медиаэлементы */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Формы — максимально нейтрально */
+input, button, textarea, select {
+  font: inherit;
+  margin: 0;
+}
+
+/* Кнопки — минимальное вмешательство */
+button {
+  cursor: pointer;
+}
+
+/* Текстовые поля */
+textarea {
+  resize: vertical;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Доступность */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
