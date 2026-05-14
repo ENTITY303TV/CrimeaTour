@@ -1,0 +1,11 @@
+.header{
+background-color: rgba(83, 42, 0, 1);
+max-width: 850px;
+min-height: 65px;
+border-radius: 15px;
+margin: 0 auto;
+display: flex;
+}
+.header_logo{
+background-color: rgb(255, 0, 0);
+};
