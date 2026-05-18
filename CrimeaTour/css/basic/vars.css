@@ -1,9 +1,7 @@
 :root {
-    --Lavender-mist: #E9DEFF;
-    --Deep_void: #0B001A;
-    --Pure_light: #FFFFFF;
-    --Royal_night: #1E0044;
-    --Midnight_pulse: #170034;
-    --Urban_ash: #56514D;
-    --Georgia: "Georgia", sans-serif;
+    --dark-brown: #532A00;
+    --brown: #633201;
+    --white: #FFFFFF;
+    --light_brown: #814101;
+    --DaysOne: "DaysOne", sans-serif;
 }

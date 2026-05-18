@@ -30,5 +30,97 @@
             </div>
         </div>
     </header>
+
+    <form class="search">
+        <div class="search_container">
+            <div class="search_field search_name">
+                <input type="text" placeholder="поиск по названию" name="search_query" required>
+            </div>
+            <div class="search_field search_date">
+                <span class="search_prefix">с</span>
+                <input type="text" placeholder="дата" name="date_start" inputmode="decimal">
+                <span class="search_prefix">до</span>
+                <input type="text" placeholder="дата" name="date_end" inputmode="decimal">
+            </div>
+            <div class="search_field search_people">
+                <input type="text" placeholder="кол.чел." name="people_count" inputmode="numeric">
+            </div>
+        </div><button type="submit" class="search_btn" aria-label="Найти">
+            <img src="../../img/lupa.svg" alt="Лупа">
+        </button>
+    </form>
+
+ <main class="main_board">
+  
+  <div class="board_row_slider slider_main_top">
+    <div class="slider_track_btn btn_prev">
+      <div class="arrow_left"></div>
+    </div>
+    
+    <div class="board_block block_slider_top slider_viewport">
+      <div class="slider_track">
+        
+        <div class="slider_slide">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Фото курорта">
+        </div>
+        
+        <div class="slider_slide">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+        </div>
+        
+        <div class="slider_slide">
+          <img src="https://media.giphy.com/media/l0HlFD9BtKnu2P07K/giphy.gif" alt="Прикольная гифка">
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="slider_track_btn btn_next">
+      <div class="arrow_right"></div>
+    </div>
+  </div>
+
+  <div class="board_row_center">
+    <div class="board_block block_directions">
+      <span>наши направления</span>
+    </div>
+  </div>
+
+  <div class="board_row_double">
+    <div class="board_block block_tours">
+      <span>туры</span>
+    </div>
+    <div class="board_block block_hotels">
+      <span>отели</span>
+    </div>
+  </div>
+
+  <div class="board_row_slider slider_main_bottom">
+    <div class="slider_track_btn btn_prev">
+      <div class="arrow_left"></div>
+    </div>
+    
+    <div class="board_block block_slider_bottom slider_viewport">
+      <div class="slider_track">
+
+        <div class="slider_slide">
+          <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1000&auto=format&fit=crop" alt="Отель">
+        </div>
+
+
+        <div class="slider_slide">
+          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1000&auto=format&fit=crop" alt="Пляж">
+        </div>
+      </div>
+    </div>
+    
+    <div class="slider_track_btn btn_next">
+      <div class="arrow_right"></div>
+    </div>
+  </div>
+
+</main>
+<script src="JS\script.js"></script>"></script>
 </body>
+
 </html>

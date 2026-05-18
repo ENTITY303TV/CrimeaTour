@@ -3,3 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
+}

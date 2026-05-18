@@ -1,0 +1,176 @@
+/* Внешняя большая доска */
+.main_board {
+  background: #532A00;
+  border-radius: 15px;
+  
+  width: 100%;
+  max-width: 1000px; 
+  min-height: 1076px; 
+  
+  margin: 40px auto;
+  padding: 40px 3%; 
+  box-sizing: border-box;
+
+  /* Строим всё строго сверху вниз через Flexbox */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+/* Строка слайдера (Стрелка + Слайдер + Стрелка) */
+.board_row_slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px; 
+}
+
+/* Восстанавливаем высоты для строк слайдеров — это КРИТИЧЕСКИ ВАЖНО! */
+.slider_main_top {
+  height: 350px;
+}
+.slider_main_bottom {
+  height: 234px;
+}
+
+
+/* Вертикальные коричневые плашки под стрелки */
+.slider_track_btn {
+  width: 23px;
+  height: 100%; /* Занимает всю высоту строки */
+  flex-shrink: 0; 
+  background: #814101;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+/* Контейнер для центрирования "Наших направлений" */
+.board_row_center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 38px; 
+  box-sizing: border-box;
+}
+
+/* Строка для Туров и Отелей */
+.board_row_double {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 38px; 
+  box-sizing: border-box;
+  gap: 25px; 
+}
+
+
+/* ОБЩИЙ СТИЛЬ ДЛЯ СЕРЫХ БЛОКОВ */
+.board_block {
+  background: #9C9999;
+  border-radius: 15px;
+  /* УБРАЛИ flex, чтобы не мешать слайдеру */
+  width: 100%;
+  height: 100%; /* Занимает всю высоту родительской строки */
+  box-sizing: border-box;
+}
+
+/* Распределение пространства внутри Flex-строк */
+.block_slider_top {
+  flex-grow: 1;
+}
+
+.block_directions {
+  flex-grow: 1;
+  height: 80px;
+}
+
+.block_tours,
+.block_hotels {
+  width: calc(50% - 12.5px); 
+  height: 250px;
+}
+
+.block_slider_bottom {
+  flex-grow: 1;
+}
+
+
+/* ТЕКСТ И ВОЗВРАТ ФЛЕКСА ДЛЯ НАВИГАЦИОННЫХ БЛОКОВ */
+.board_block span {
+  font-family: 'DaysOne-Regular', sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Навигационным блокам нужен flex, чтобы центрировать текст внутри */
+.block_directions, .block_tours, .block_hotels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* --- ОБНОВЛЕННЫЕ СТРЕЛКИ ИЗ FIGMA (SVG) --- */
+.arrow_left, .arrow_right {
+  width: 15px;
+  height: 148px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.arrow_left { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 148' fill='none'><path d='M12 3L3 74L12 145' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>"); }
+.arrow_right { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 148' fill='none'><path d='M12 3L3 74L12 145' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>"); transform: rotate(-180deg); }
+
+
+/* =========================================
+   ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ СЛАЙДЕРОВ
+   ========================================= */
+
+/* Обертка (серый блок), скрывающая всё, что выходит за рамки */
+.slider_viewport {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+/* Длинная пленка, на которой в ряд лежат все слайды */
+.slider_track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Сам кадр слайдера */
+.slider_slide {
+  flex: 0 0 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Растягиваем фото, видео и гифки на весь блок */
+.slider_slide img,
+.slider_slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезает излишки, не сплющивая картинку */
+  border-radius: 15px; 
+}
+
+
+/* --- МЕДИА-ЗАПРОС ДЛЯ МОБИЛОК --- */
+@media (max-width: 650px) {
+  .board_row_double { flex-direction: column; gap: 20px; }
+  .block_tours, .block_hotels { width: 100%; }
+  .board_block span { font-size: 16px; }
+}
