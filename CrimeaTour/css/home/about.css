@@ -1,0 +1,21 @@
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;            /* Отступ между квадратами */
+    max-width: 850px;     /* Ширина как у поиска */
+    margin: 10px auto;    /* Центрируем блок на странице */
+    padding: 0 10px;      /* Отступы по бокам */
+    box-sizing: border-box;
+}
+
+.about-card {
+    max-width: 800px;
+    height: 300px;        /* Размер высоты квадрата */
+    border-radius: 15px;  /* Скругление углов */
+    overflow: hidden;     /* Чтобы картинка не вылезала за скругление */
+}
+
+.about-card img{
+    width: 100%;
+    height: 100%; 
+}

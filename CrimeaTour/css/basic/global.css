@@ -1,10 +1,135 @@
-.body {
-    background-image: url(../../img/back.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+/* --- 1. БАЗОВЫЕ НАСТРОЙКИ (ФОН И СКРОЛЛ) --- */
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Защита от горизонтального скролла */
 }
-html, body {
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;   /* Страница растет вниз вместе с досками */
+  position: relative;
+  display: flow-root; /* Убивает скрытые отступы, из-за которых ломался верх */
+  
+  /* ЖЕЛЕЗОБЕТОННЫЙ ФОН: */
+  background-image: url('../../img/back.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom; /* Прижимает палатки к низу экрана */
+  background-attachment: fixed;        /* Фиксирует фон на месте при скролле */
+}
+
+/* --- 2. КОНТЕЙНЕР ДЛЯ КАНАТОВ --- */
+.page_ropes_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;          /* Растягиваем контейнер от самого верха до самого низа страницы */
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* Запрещает горизонтальную прокрутку */
+  max-width: 1000px; 
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ВЕРЕВОК */
+.rope {
+  position: absolute; 
+  width: 12px;
+  background-image: url('../../img/verevka.svg');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+/* --- 3. НАСТРОЙКА КАЖДОЙ ВЕРЕВКИ (ТВОИ НАСТРОЙКИ) --- */
+/* Сквозные веревки привязаны к top: 0 и bottom: 0, чтобы не было дыр сверху */
+.rope_1 { 
+  left: 0px; 
+  top: 0; 
+  bottom: 0; 
+}
+
+.rope_2 { 
+  left: 225px; 
+  top: 1100px; 
+  height: 500px;
+}
+
+.rope_3 { 
+  left: 350px; 
+  top: 1100px; 
+  height: 500px;
+}
+
+.rope_4 { 
+  left: 640px; 
+  top: 1100px; 
+  height: 500px;
+}
+
+.rope_5 { 
+  left: 765px; 
+  top: 1100px; 
+  height: 500px; 
+}
+
+.rope_6 { 
+  left: 989px; 
+  top: 0; 
+  bottom: 0; 
+}
+
+.rope_7 { 
+  left: 77px; 
+  top: 0px; 
+  height: 500px;
+}
+
+.rope_8 { 
+  left: 910px; 
+  top: 0px; 
+  height: 500px; 
+}
+
+/* --- 4. ДОСКИ (ПЕРЕДНИЙ ПЛАН) --- */
+.header, 
+.search, 
+.main_board, 
+.main_footer {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1010px) {
+  .page_ropes_bg {
+    display: none !important; /* Намертво прячем весь контейнер со всеми 8 веревками */
+  }
+}
+
+.main_board {
+  background: #532A00;
+  border-radius: 15px;
+  width: 100%;          
+  max-width: 1000px;   
+  min-height: 1000px; 
+  height: auto;         
+  margin: 0px auto;
+  padding: 35px 32px;   
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner_board {
+  background: #633201; 
+  border-radius: 15px;
+  width: 100%; 
+  min-height: 1000px;          
+  height: auto;         
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;     
+  gap: 30px;            
 }

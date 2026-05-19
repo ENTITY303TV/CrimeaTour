@@ -1,0 +1,9 @@
+@import 'basic/reset.css';
+@import 'basic/fonts.css';
+@import 'basic/vars.css';
+@import 'basic/global.css';
+@import 'components/btn.css';
+@import 'components/footer.css';
+@import 'components/header.css';
+@import 'home/about.css';
+@import 'basic/skills.css';

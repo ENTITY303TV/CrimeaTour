@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_catalog.css">
   <title>Document</title>
 </head>
 
@@ -66,78 +66,46 @@
   <main class="main_board">
     <div class="inner_board">
 
-      <div class="board_row_slider slider_main_top">
-        <div class="slider_track_btn btn_prev">
-          <svg class="arrow_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 148" fill="none">
-            <path d="M12 3L3 74L12 145" stroke="white" stroke-width="6" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </div>
-
-        <div class="board_block block_slider_top slider_viewport">
-          <div class="slider_track">
-            <div class="slider_slide">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
-                alt="Фото курорта">
+<div class="listings-container">
+    
+    <div class="listing-card">
+        <div class="listing-info">
+            
+            <div class="listing-header">
+                <div class="listing-title">Название отеля</div>
+                <button class="favorite-btn">🤍</button>
             </div>
-            <div class="slider_slide">
-              <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+
+            <div class="listing-desc">
+                Здесь будет большое и красивое описание этого потрясающего места, которое затянет туриста с первых строк...
             </div>
-            <div class="slider_slide">
-              <img src="https://media.giphy.com/media/l0HlFD9BtKnu2P07K/giphy.gif" alt="Прикольная gif">
+
+            <div class="listing-footer">
+                <div class="listing-attributes">
+                    <span class="chip">Wi-Fi</span>
+                    <span class="chip">Бассейн</span>
+                    <span class="rating">⭐ 4.8</span>
+                </div>
+                <div class="listing-price">10 321 000 за ночь</div>
             </div>
-          </div>
+
         </div>
 
-        <div class="slider_track_btn btn_next">
-          <svg class="arrow_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 148" fill="none">
-            <path d="M3 3L12 74L3 145" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <div class="listing-image">
+            <img src="img/hotel1.jpg" alt="Отель">
         </div>
-      </div>
+    </div>
 
-      <div class="board_row_center">
-        <div class="board_block block_directions">
-          <span>наши направления</span>
-        </div>
-      </div>
+    <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">...</button>
+    </div>
 
-      <div class="board_row_double">
-        <div class="board_block block_tours">
-          <span>туры</span>
-        </div>
-         <a class="board_block block_hotels" href="tours.html">
-          <span>отели</span>
-        </a>
-      </div>
+</div>
 
-      <div class="board_row_slider slider_main_bottom">
-        <div class="slider_track_btn btn_prev">
-          <svg class="arrow_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 148" fill="none">
-            <path d="M12 3L3 74L12 145" stroke="white" stroke-width="6" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </div>
-
-        <div class="board_block block_slider_bottom slider_viewport">
-          <div class="slider_track">
-            <div class="slider_slide">
-              <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1000&auto=format&fit=crop"
-                alt="Отель">
-            </div>
-            <div class="slider_slide">
-              <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1000&auto=format&fit=crop"
-                alt="Пляж">
-            </div>
-          </div>
-        </div>
-
-        <div class="slider_track_btn btn_next">
-          <svg class="arrow_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 148" fill="none">
-            <path d="M3 3L12 74L3 145" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
 
     </div>
   </main>

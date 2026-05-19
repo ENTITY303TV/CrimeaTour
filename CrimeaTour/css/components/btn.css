@@ -1,0 +1,49 @@
+/* =========================================
+   ФИНАЛЬНЫЙ КОМПОНЕНТ КНОПОК (В ПАПКУ BTN)
+   ========================================= */
+
+/* 1. Базовые правила для ВСЕХ кнопок (Добавили .slider_track_btn, чтобы включить переходы) */
+.btn-main,
+.slider_track_btn {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  
+  /* Плавная анимация ховера и клика */
+  transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
+}
+
+/* 2. Специфичные базовые цвета (чтобы ничего не конфликтовало) */
+
+/* Светлые кнопки (Шапка и кнопка поиска) */
+.header_about, 
+.header_favorite, 
+.header_log,
+.search_btn {
+  background-color: var(--light_brown);
+}
+
+/* Тёмные кнопки (Футер и стрелки слайдера) */
+.footer_link_pill,
+.slider_track_btn {
+  background-color: #814101;
+}
+
+/* 3. ЕДИНЫЙ ХОВЕР: Теперь работает и на .btn-main, и на .slider_track_btn напрямую */
+.btn-main:hover,
+.slider_track_btn:hover {
+  background-color: var(--light_brown) !important;
+  /* Защита для светлых кнопок: если они уже светлые, при ховере они чуть-чуть подцветятся */
+  filter: brightness(1.1); 
+}
+
+/* 4. ЕДИНЫЙ КЛИК: Все кнопки плавно вдавливаются */
+.btn-main:active,
+.slider_track_btn:active {
+  transform: scale(0.96);
+}
